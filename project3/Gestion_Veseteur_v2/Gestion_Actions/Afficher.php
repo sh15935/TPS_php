@@ -25,8 +25,8 @@ $data = Lister();
             <td><?php echo $row['Prénom']; ?></td>
             <td><?php echo $row['email']; ?></td>
             <td>
-                <a href="../Gestion_Actions/Form_edit.php?id=<?php echo $row['ID']; ?>">Edit</a> |
-                <a href="../Gestion_Actions/Supprimer.php?id=<?php echo $row['ID']; ?>">Sup</a>
+                <a href="../Gestion_Actions/Form_edit.php?id=<?php echo $row['id']; ?>">Edit</a> |
+                <a href="../Gestion_Actions/Supprimer.php?id=<?php echo $row['id']; ?>">Sup</a>
             </td>
         </tr>
         <?php } ?>

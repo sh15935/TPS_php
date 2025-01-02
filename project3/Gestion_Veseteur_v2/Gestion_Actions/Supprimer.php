@@ -1,8 +1,8 @@
 <?php
-$conn = new mysqli('localhost', 'root', '', 'Gestion_visiteurs');
+include_once '../Acces_BD/Visiteur.php';
+isset($_GET['id']);
 $id = $_GET['id'];
-
-$conn->query("DELETE FROM VISITEURS WHERE ID = $id");
-
-header("Location: Affichage.php");
+Supprimer($id);
+header("Location: Afficher.php");
+exit();
 ?>

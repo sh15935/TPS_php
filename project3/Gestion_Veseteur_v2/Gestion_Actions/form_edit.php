@@ -1,19 +1,11 @@
 <?php
 include_once '../Acces_BD/Visiteur.php';
 
-if (isset($_POST['id'])) {
-    $id = $_POST['id'];
-    $visiteur = Rechercher($id);
-    if ($visiteur) {
+isset($_GET['id']);
+$id = $_GET['id'];
+$visiteur = Rechercher($id);
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modifier Visiteur</title>
-</head>
-<body>
+<center>
     <h1>Modifier les informations du visiteur</h1>
     <form action="../Gestion_Actions/Modifier.php" method="POST">
         <input type="hidden" name="id" value="<?= $visiteur['id'] ?>">
@@ -28,5 +20,5 @@ if (isset($_POST['id'])) {
 
         <button type="submit">Enregistrer</button>
     </form>
-</body>
+</center>
 </html>
