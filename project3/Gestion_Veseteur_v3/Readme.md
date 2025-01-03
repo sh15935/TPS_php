@@ -1,5 +1,3 @@
-Voici un fichier `README.md` prêt à être ajouté à votre projet sur GitHub. Vous pouvez simplement copier et coller ce code dans un fichier `README.md` dans la racine de votre dépôt.
-
 ```markdown
 # Gestion des Visiteurs
 
