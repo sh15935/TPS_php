@@ -1,11 +1,9 @@
-```markdown
-# Gestion des Visiteurs
+#Gestion des Visiteurs
 
 Ce projet est une application de gestion des visiteurs permettant d'ajouter, modifier, afficher, et supprimer des informations dans une base de données. L'application utilise PHP pour la logique côté serveur et suit une architecture modulaire.
 
-## 📁 Structure du projet
+##📁 Structure du projet
 
-```
 projet/
 │
 ├── Acces_BD/
@@ -23,7 +21,6 @@ projet/
 │   └── config.php            # Configuration de la base de données (host, user, password, etc.)
 │
 └── README.md                 # Documentation du projet
-```
 
 ## 🛠️ Fonctionnalités
 
