@@ -9,20 +9,18 @@ Ce projet est une application de gestion des visiteurs permettant d'ajouter, mod
 projet/
 │
 ├── Acces_BD/
-│   └── Visiteur.php          # Contient les fonctions d'accès à la base de données
-│
-├── Gestion_Actions/
-│   └── Visiteur.php          # Contrôleur central pour toutes les actions (ajout, modification, suppression, etc.)
+│   ├── Visiteur.php          # Contient les fonctions d'accès à la base de données
+│   ├── .env                  # Fichier contenant les variables d'environnement (connexion à la DB)
+│   └── Connexion.php         # Classe ou fonctions pour gérer la connexion à la base de données
 │
 ├── IHM/
 │   ├── affichage.php         # Page affichant la liste des visiteurs
 │   ├── form_Saisie.php       # Formulaire pour ajouter un nouveau visiteur
 │   └── form_edit.php         # Formulaire pour modifier un visiteur existant
 │
-├── config/
-│   └── config.php            # Configuration de la base de données (host, user, password, etc.)
+├── Visiteur.php              # Contrôleur central pour les actions liées aux visiteurs
 │
-└── README.md                 # Documentation du projet
+└── README.md                 # Documentation du projet           
 ```
 
 
