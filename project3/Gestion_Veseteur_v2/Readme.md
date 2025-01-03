@@ -49,7 +49,7 @@ projet/
 1. **Cloner le dépôt :**
    ```bash
    git clone https://github.com/sh15935/TP1_php.git
-   cd TP1_php/project3/Gestion_Veseteur_v3
+   cd TP1_php/project3/Gestion_Veseteur_v2
    ```
 
 2. **Configurer la base de données :**
