@@ -1,8 +1,8 @@
-#Gestion des Visiteurs
+# Gestion des Visiteurs
 
 Ce projet est une application de gestion des visiteurs permettant d'ajouter, modifier, afficher, et supprimer des informations dans une base de données. L'application utilise PHP pour la logique côté serveur et suit une architecture modulaire.
 
-##📁 Structure du projet
+## 📁 Structure du projet
 
 
 ```
@@ -44,32 +44,24 @@ projet/
 
 1. **Cloner le dépôt :**
    ```bash
-   git clone https://github.com/votre-utilisateur/votre-repo.git
-   cd votre-repo
+   git clone https://github.com/sh15935/TP1_php.git
+   cd TP1_php/project3/Gestion_Veseteur_v3
    ```
 
 2. **Configurer la base de données :**
    - Importez le fichier SQL (non inclus ici) pour créer la table des visiteurs.
-   - Configurez les informations de connexion dans `config/config.php` :
-     ```php
-     <?php
-     define('DB_HOST', 'localhost');
-     define('DB_USER', 'root');
-     define('DB_PASSWORD', '');
-     define('DB_NAME', 'nom_de_la_base');
-     ?>
+   - Configurez les informations de connexion dans `Acces_BD/.env` :
+     ```.env
+     DB_HOST=localhost
+     DB_USER=root
+     DB_PASSWORD=
+     DB_NAME=Gestion_visiteurs_v2
      ```
-
-3. **Lancer le serveur local :**
-   ```bash
-   php -S localhost:8000
-   ```
-   Accédez à `http://localhost:8000/IHM/affichage.php`.
 
 ## ⚙️ Utilisation
 
 1. **Accéder à la liste des visiteurs :**
-   Ouvrez `http://localhost:8000/IHM/affichage.php` pour afficher la liste.
+   Ouvrez `http://localhost/TP1_php/project3/Gestion_Veseteur_v3` pour afficher la liste.
 
 2. **Ajouter un visiteur :**
    Cliquez sur "Ajouter un visiteur" pour accéder au formulaire.
@@ -88,8 +80,8 @@ Le fichier `Visiteur.php` dans le dossier `Gestion_Actions` agit comme un contr�
 |-------------|---------------------------------|---------------------------------------|
 | afficher    | Affiche la liste des visiteurs  | `Visiteur.php?action=afficher`       |
 | ajouter     | Ajoute un nouveau visiteur      | `Visiteur.php?action=ajouter`        |
-| modifier    | Modifie un visiteur existant    | `Visiteur.php?action=modifier&id=1`  |
-| supprimer   | Supprime un visiteur            | `Visiteur.php?action=supprimer&id=1` |
+| modifier    | Modifie un visiteur existant    | `Visiteur.php?action=modifier&id=`  |
+| supprimer   | Supprime un visiteur            | `Visiteur.php?action=supprimer&id=` |
 
 ## 🧪 Test de l’application
 
