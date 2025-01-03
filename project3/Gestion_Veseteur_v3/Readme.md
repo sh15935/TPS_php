@@ -19,6 +19,8 @@ projet/
 │   └── form_edit.php         # Formulaire pour modifier un visiteur existant
 │
 ├── Visiteur.php              # Contrôleur central pour les actions liées aux visiteurs
+│ 
+├── index.php 
 │
 └── README.md                 # Documentation du projet           
 ```
