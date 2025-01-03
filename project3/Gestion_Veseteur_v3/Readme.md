@@ -4,6 +4,8 @@ Ce projet est une application de gestion des visiteurs permettant d'ajouter, mod
 
 ##📁 Structure du projet
 
+
+```
 projet/
 │
 ├── Acces_BD/
@@ -21,6 +23,8 @@ projet/
 │   └── config.php            # Configuration de la base de données (host, user, password, etc.)
 │
 └── README.md                 # Documentation du projet
+```
+
 
 ## 🛠️ Fonctionnalités
 
