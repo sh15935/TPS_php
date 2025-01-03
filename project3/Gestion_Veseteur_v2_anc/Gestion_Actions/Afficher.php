@@ -25,5 +25,5 @@ $data = Lister();
     </tr>
     <?php } ?>
 </table>
-<a href="../Gestion_Actions/Form_ajout.php">Ajouter un utilisateur</a>
+<a href="Form_ajout.php">Ajouter un utilisateur</a>
 </center>

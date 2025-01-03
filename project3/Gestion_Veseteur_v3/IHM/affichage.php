@@ -19,11 +19,11 @@ $data = Lister();
         <td><?php echo $row['Prénom']; ?></td>
         <td><?php echo $row['email']; ?></td>
         <td>
-            <a href="../Gestion_Actions/Form_edit.php?id=<?php echo $row['id']; ?>">Edit</a> |
-            <a href="../Gestion_Actions/Supprimer.php?id=<?php echo $row['id']; ?>">Sup</a>
+            <a href="../Visiteur.php?action=modifier&id=<?php echo $row['id']; ?>">Edit</a> |
+            <a href="../Visiteur.php?action=supprimer&id=<?php echo $row['id']; ?>">Sup</a>
        </td>
     </tr>
     <?php } ?>
 </table>
-<a href="../Gestion_Actions/Form_ajout.php">Ajouter un utilisateur</a>
+<a href="../Visiteur.php?action=ajouter">Ajouter un utilisateur</a>
 </center>

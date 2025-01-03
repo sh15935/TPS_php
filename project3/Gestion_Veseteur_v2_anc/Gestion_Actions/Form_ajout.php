@@ -1,6 +1,6 @@
 <center>
     <h1>Ajouter visiteur</php>
-    <form action="../Gestion_Actions/Ajouter.php" method="post" >
+    <form action="ajouter.php" method="post" >
         <table>
             <tr>
                 <td>nom :</td>

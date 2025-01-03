@@ -5,7 +5,6 @@ isset($_GET['id']);
 $id = $_GET['id'];
 $visiteur = Rechercher($id);
 ?>
-
 <center>
     <h1>Modifier les informations du visiteur</h1>
     <form action="../Gestion_Actions/Modifier.php" method="POST">

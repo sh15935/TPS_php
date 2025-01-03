@@ -8,7 +8,7 @@ $visiteur = Rechercher($id);
 
 <center>
     <h1>Modifier les informations du visiteur</h1>
-    <form action="../Gestion_Actions/Modifier.php" method="POST">
+    <form action="../Visiteur.php?action=modifier&id=<? $id ?>" method="POST">
         <input type="hidden" name="id" value="<?= $visiteur['id'] ?>">
         <label for="nom">Nom:</label>
         <input type="text" name="nom" id="nom" value="<?= $visiteur['nom'] ?>" required><br><br>
