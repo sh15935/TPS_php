@@ -45,13 +45,22 @@ projet/
 1. **Cloner le dépôt :**
    ```bash
    git clone https://github.com/sh15935/TP1_php.git
-   cd TP1_php/project3/Gestion_Veseteur_v3
+   cd TP1_php/project3/Gestion_Veseteur_v2
    ```
-
-2. **Configurer la base de données :**
+2. **Créez une base de données MySQL nommée Gestion_visiteurs_v2 .
+3. **Créez une table VISITEURS avec les champs suivants :
+    ```MySql
+    CREATE TABLE visiteurs (
+        id  INT AUTO_INCREMENT PRIMARY KEY,
+        nom VARCHAR(25),
+        Prénom VARCHAR(25),
+        email VARCHAR(25)
+    );
+    ```
+4. **Configurer la base de données :**
    - Importez le fichier SQL (non inclus ici) pour créer la table des visiteurs.
    - Configurez les informations de connexion dans `Acces_BD/.env` :
-     ```.env
+     ```
      DB_HOST=localhost
      DB_USER=root
      DB_PASSWORD=
