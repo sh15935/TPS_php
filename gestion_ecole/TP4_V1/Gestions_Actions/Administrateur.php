@@ -23,6 +23,4 @@ case "Modifier_password":
     break;
 default: header('Location:../IHM/Administrateur/index.php');
 }
-
-
 ?>

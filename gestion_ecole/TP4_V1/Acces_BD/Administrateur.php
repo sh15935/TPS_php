@@ -1,25 +1,28 @@
 <?php
 require_once "connexion.php";
 $link= Connect();
-function Ajouter($data){
+function Ajouter($data) {
 global $link;
-$req= "insert into etudiant(code,nom,prenom,sexe,photo,email,langues,specialite) 
-    values ('{$data['code']}','{$data['nom']}','{$data['prenom']}','{$data['sexe']}','{$data['photo']}','{$data['email']}','{$data['langues']}','{$data['specialite']}') ";
-$res = mysqli_query($link,$req);
-return $res;
+    $req = "INSERT INTO etudiant (nom, prenom, sexe, photo, email, langues, specialite)
+            VALUES ('{$data['nom']}', '{$data['prenom']}', '{$data['sexe']}', '{$data['photo']}', '{$data['email']}', '{$data['langues']}', '{$data['specialite']}')";
+    
+    $res = mysqli_query($link, $req);
+    
+    return $res;
 }
+
 
 function Modifier($data){
 global $link;
-    $req= "update etudiant set
+    $req= "UPDATE etudiant SET
         nom='{$data['nom']}',
         prenom='{$data['prenom']}',
         sexe='{$data['sexe']}',
         photo='{$data['photo']}',
         email='{$data['email']}',
         langues='{$data['langues']}',
-        specialite='{$data['specialite']}',
-        where code='{$data['code']}', ";
+        specialite='{$data['specialite']}'
+        WHERE code='{$data['code']}'";
 $res= mysqli_query($link,$req);
 return $res;
 }
@@ -31,14 +34,17 @@ function Supprimer($code) {
     
     return $res;
 }
+
 function Lister() {
-        global $link;
-        $etudiant=array();
-        $req="select * from etudiant";
-        $res=mysqli_query($link,$req);
-        while($Etu=mysqli_fetch_array($res))
-        $etudiant[]=$Etu;
-        return $etudiant;
+    global $link;
+    $etudiant = [];
+    $req = "SELECT * FROM etudiant";
+    $res = mysqli_query($link, $req);
+    while ($Etu = mysqli_fetch_assoc($res)) {
+        $etudiant[] = $Etu;
+    }
+    mysqli_free_result($res);
+    return $etudiant;
 }
 
 function Modifier_password($code,$nouveau_password){
@@ -49,6 +55,4 @@ function Modifier_password($code,$nouveau_password){
     $res= mysqli_query($link,$req);
     return $res;
 }
-
-
 ?>
