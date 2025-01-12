@@ -7,7 +7,7 @@ $code = isset($_GET['code']) ? $_GET['code'] : null;
 
 // Prioritize `code` if provided, otherwise fallback to `user`.
 if ($code) {
-    $etudiant = GetEtudiantByCode($code);
+    $etudiant = Afficher($code);
 } elseif ($user) {
     $etudiant = GetEtudiantByUser($user);
 } else {

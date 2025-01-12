@@ -8,17 +8,20 @@ $action=$_GET['action'];
 
 switch($action)
 {
-case "Ajouter": Ajouter($_POST); 
+case "Ajouter":
+    Ajouter($_POST);
     header('Location:Administrateur.php');
     break;
-case "Modifier": Modifier($_POST);
-    header('Location:Administrateur.php'); 
+case "Modifier":
+    Modifier($_POST);
+    header('Location:Administrateur.php');
     break;
-case "Supprimer": Supprimer($_GET['code']); 
+case "Supprimer":
+    Supprimer($_GET['code']);
     header('Location:Administrateur.php');
     break;
 case "Modifier_password":
-    Modifier_password($_POST['code'],$_POST['nouveau_password']); 
+    Modifier_password($_POST['code'],$_POST['nouveau_password']);
     header('Location:Administrateur.php');
     break;
 default: header('Location:../IHM/Administrateur/index.php');

@@ -23,10 +23,10 @@ $etudiants = $_SESSION['etudiants'];
                 <td><?= htmlspecialchars($line['prenom']); ?></td>
                 <td><?= htmlspecialchars($line['email']); ?></td>
                 <td><img src="<?= htmlspecialchars($line['photo']); ?>" alt="Photo" width="100"></td>
-                <td><?= htmlspecialchars($line['langues']); ?></td>
-                <td><?= htmlspecialchars($line['specialite']); ?></td>
+                <td><?= htmlspecialchars($line['langues']); ?></td> <!-- Display languages -->
+                <td><?= htmlspecialchars($line['specialite']); ?></td> <!-- Display specialty -->
                 <td><a href="form.php?action=Modifier&code=<?= htmlspecialchars($line['code']); ?>">Modifier</a></td>
-                <td><a href="/Gestions_Actions/Administrateur.php?action=Supprimer&code=<?= htmlspecialchars($line['code']); ?>">Supp</a></td>
+                <td><a href="../../Gestions_Actions/Administrateur.php?action=Supprimer&code=<?= htmlspecialchars($line['code']); ?>">Supp</a></td>
             </tr>
         <?php } ?>
     </table>

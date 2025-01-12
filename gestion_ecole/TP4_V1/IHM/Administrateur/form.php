@@ -3,11 +3,8 @@ require_once "../../Acces_BD/Administrateur.php";
 session_start();
 
 $etudiants = $_SESSION['etudiants'] ?? [];
-
-// Determine action (Ajouter or Modifier)
 $action = $_GET['action'] ?? 'Ajouter';
 
-// Default values for fields (for Ajouter)
 $code = '';
 $nom = '';
 $prenom = '';
@@ -16,8 +13,8 @@ $photo = '';
 $email = '';
 $langues = '';
 $specialite = '';
+$user = '';
 
-// If Modifier, populate fields from $_SESSION['etudiants']
 if ($action === 'Modifier' && isset($_GET['code'])) {
     foreach ($etudiants as $etudiant) {
         if ($etudiant['code'] === $_GET['code']) {
@@ -29,6 +26,7 @@ if ($action === 'Modifier' && isset($_GET['code'])) {
             $email = htmlspecialchars($etudiant['email']);
             $langues = htmlspecialchars($etudiant['langues']);
             $specialite = htmlspecialchars($etudiant['specialite']);
+            $user = htmlspecialchars($etudiant['user']);
             break;
         }
     }
@@ -37,7 +35,6 @@ if ($action === 'Modifier' && isset($_GET['code'])) {
 <center>
     <form action="../../Gestions_Actions/Administrateur.php?action=<?= $action ?>" method="post">
         <table>
-            <!-- Hidden field for Code -->
             <input type="hidden" name="code" value="<?= $code ?>">
 
             <tr>
@@ -67,6 +64,10 @@ if ($action === 'Modifier' && isset($_GET['code'])) {
             <tr>
                 <td>Specialité</td>
                 <td><input type="text" name="specialite" value="<?= $specialite ?>" required></td>
+            </tr>
+            <tr>
+                <td>User</td>
+                <td><input type="text" name="user" value="<?= $user ?>" required></td>
             </tr>
             <tr>
                 <td><input type="submit" value="Envoyer"></td>

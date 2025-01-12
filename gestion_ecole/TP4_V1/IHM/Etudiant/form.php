@@ -3,9 +3,7 @@ require_once "../../Acces_BD/Etudiant.php";
 session_start();
 
 $code = $_GET['code'] ;
-$etudiant = GetEtudiantByCode($code); // Retrieve student details by code
-
-// Get the action from the URL or set default
+$etudiant = Afficher($code);
 $action = $_GET['action'] ?? '';
 ?>
 
