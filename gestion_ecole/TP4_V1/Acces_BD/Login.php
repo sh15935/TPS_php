@@ -15,7 +15,7 @@ function login($username,$password){
             if($_SESSION['nature']=='admin'){
                 header('Location:../Gestions_Actions/Administrateur.php');
             } else {
-                header("Location:../Gestions_Actions/Etudiant.php?id=<?php echo $username ?>");
+                header("Location:../Gestions_Actions/Etudiant.php?user=$username");
             }
         } else {
         echo "password incorrect";

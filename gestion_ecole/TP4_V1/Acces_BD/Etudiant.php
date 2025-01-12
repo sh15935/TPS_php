@@ -27,4 +27,21 @@ function Modifier_photo($code,$nouvelle_photo){
     $res= mysqli_query($link,$req);
     return $res;
 }
+
+function GetEtudiantByCode($code) {
+    $link = Connect();
+    $query = "SELECT * FROM etudiant WHERE code = ?";
+    $stmt = $link->prepare($query);
+    $stmt->bind_param('i', $code); // Assuming `code` is an integer
+    $stmt->execute();
+    return $stmt->get_result()->fetch_assoc();
+}
+function GetEtudiantByUser($user) {
+    $link = Connect();
+    $query = "SELECT * FROM etudiant WHERE user = ?";
+    $stmt = $link->prepare($query);
+    $stmt->bind_param('s', $user);
+    $stmt->execute();
+    return $stmt->get_result()->fetch_assoc();
+}
 ?>
